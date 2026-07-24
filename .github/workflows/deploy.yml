@@ -53,7 +53,7 @@ jobs:
           port: 22
           script: |
             set -e
-            cd ${{ secrets.DEPLOY_PATH }}
+            cd /root/web-crm
             sed -i "s|image: .*webb-airaccretion.*|image: ${{ env.IMAGE_NAME }}:${{ needs.build-and-push.outputs.image_tag }}|" docker-compose.yml
             docker compose pull webb-airaccretion
             docker compose up -d --force-recreate webb-airaccretion
