@@ -1,0 +1,14 @@
+node_modules
+npm-debug.log
+.git
+.gitignore
+.env
+.env.*
+!.env.example
+__MACOSX
+*.zip
+.DS_Store
+README.md
+sessions
+uploads
+*.log
